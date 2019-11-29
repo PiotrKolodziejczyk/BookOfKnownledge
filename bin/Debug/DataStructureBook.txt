@@ -1,0 +1,22 @@
+﻿Sortowanie przez wybieranie (Sortuje tablice przez wybieranie)<;;>Receptura 0.0. str 45
+Sortowanie przez wstawianie (Sortuje tablice przez wstawianie)<;;>Receptura 0.0. str 48
+Sortowanie bąbelkowe (Sortuje tablice bąbelkowo)<;;>Receptura 0.0. str 50
+Sortowanie szybkie (Szybko sortuje tablice)<;;>Receptura 0.0. str 52
+ArrayList (Da się dodawać,usuwać,liczyć oraz znajdować po indeksie, nie jest silnie typowana)<;ArrayList arrayList = new ArrayList();>Receptura 0.0. str 55
+SortedList (Lista uporządkowana ,kolekcja klucz-wartość uporządkowana według kluczy. Książka Adresowa)<;SortedList<string, Person> people = new SortedList<string, Person>();;>Receptura 0.0. str 61
+LinkedList (lista dwukierunkowa ,ma właściwości next i previous . Tworzy się ją za pomocą linkedlistNode. Czytnik Książki)<;LinkedList<Page> pages = new LinkedList<Page>(); LinkedListNode<Page> nodePageFourth = pages.AddLast(pageFourth);;>Receptura 0.0. str 64
+CircularLinkedList (Lista cykliczna trzeba samemu przerobić LinkedList aby była cykliczna. Zakręć kołem)<;;>Receptura 0.0. str 67
+Stos (Stack zasada LIFO ostatni wchodzi pierwszy wychodzi , przykład sterta płyt jeżeli kładziemy na wierzchu jako pierwszą musimy ją zdjąć. odwracanie wyrazów , wieża Hanoi)<;Stack<char> chars = new Stack<char>();;>Receptura 0.0. str 75
+Kolejka (Queque zasada FIFO first in first out , wchodzi na koniec a pierwszy wychodzi jak w kolejce. Telefoniczne biuro obsługi klienta z jednym konsultantem i z wieloma)<;Queue<IncomingCall> Calls = new Queue<IncomingCalls>();;>Receptura 0.0. str 85
+Kolejka Pryiorytetowa (Nadaje się priorytety ,kto ma wiekszy priorytet wychodzi pierwszy . nuget OptimizedPriorityQueue. Biuro telefonicznej obsługi klienta z priorytetem )<;SimplePriorityQueue<IncomingCall> Calls = new SimplePriorityQueue<IncomingCall>();;>Receptura 0.0. str 95
+Tablica z Haszowaniem (Wyszukiwanie w oparciu o klucz ,generuje indeks kubełka na podstawie klucza .Nie pozwala określić typu klucza i wartośći są typu object, Nie generyczna Hashtable i generyczna Dictionary . Książka telefoniczna)<;Hashtable phoneBook = new Hashtable();;>Receptura 0.0. str 102
+Słowniki (Generyczna tablica z hashowaniem klucz- wartość . Pozwala określic typ klucza i wartości. Wyszukiwanie produktu , dane użytkownika )<;Dictionary<string,string> dictionary = new Dictionary<string,string>();;>Receptura 0.0. str 104
+Słowniki Uporzątkowane (Słownik uporządkowany według kluczy , Encyklopedia)<;SortedDictionary<string,string> sortedDictionary = new SortedDictionary<string,string>();;>Receptura 0.0. str 109
+Zbiory haszowane (Kolekcja bez powtarzających się elementów i bez określonego porządku . Można dowiedzieć się tylko czy coś jest w zbiorze czy nie. Kupony czy został wykorzystany . Baseny kto był na ilu basenach z 4)<;Hashset<int> hashset = new Hashset<int>();;>Receptura 0.0. str 113
+Zbiory uporządkowane (SortedSet potrzebujemy wtedy gdy potrzeba uporządkowanej kolekcji różnych elementów bez powtarzania się elementów . Usuwanie duplikatów z zwykłej listy)<;SortedSet<string> sorted = new SortedSet<string>();;>Receptura 0.0. str 120
+Zwykłe drzewa (Drzewo składa się z wielu węzłow w tym z jednego korzenia może mieć dowolną liczbe dzieci, implementacja samodzielna. Hierarchia identyfikatorów , Struktura przedsiębiorstwa)<;;>Receptura 0.0. str 124
+Drzewo binarne (Węzeł drzewa binarnego nie może mieć wiecej niż dwoje dzieci.Implementacja samodzielna. Prosty quiz tak lub nie)<;;>Receptura 0.0. str 131
+Binarne drzewa poszukiwań (Wartości lewego dziecka musi być mniejsza niż jego wartość)<;;>Receptura 0.0. str 140
+Graf (Struktura danych składająca się z węzłów i krawędzi, mogą być skierowane i nie skierowane z kosztem lub bez. Reprezentacja kontaków , lub doprowadzenia prądu do budynków jak najtańszym kosztem algorytm kruskala, algorytm prima , najkrótsza ścieżka algorytm Dijkstry)<;;>Receptura 0.0. str 170
+  
+

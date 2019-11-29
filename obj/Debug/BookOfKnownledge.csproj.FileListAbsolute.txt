@@ -1,0 +1,67 @@
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\BookOfKnownledge.exe.config
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\BookOfKnownledge.exe
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\BookOfKnownledge.pdb
+A:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.csprojAssemblyReference.cache
+A:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.Form1.resources
+A:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.Properties.Resources.resources
+A:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.csproj.GenerateResource.cache
+A:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.csproj.CoreCompileInputs.cache
+A:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.exe
+A:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.pdb
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\Npgsql.dll
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Buffers.dll
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Memory.dll
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Numerics.Vectors.dll
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Text.Encodings.Web.dll
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Text.Json.dll
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Threading.Tasks.Extensions.dll
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.ValueTuple.dll
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\Npgsql.pdb
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\Npgsql.xml
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Buffers.xml
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Memory.xml
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Numerics.Vectors.xml
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Text.Encodings.Web.xml
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Text.Json.xml
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Threading.Tasks.Extensions.xml
+A:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.ValueTuple.xml
+A:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.csproj.CopyComplete
+A:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.Form2.resources
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\BookOfKnownledge.exe.config
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\BookOfKnownledge.exe
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\BookOfKnownledge.pdb
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\Npgsql.dll
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Buffers.dll
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Memory.dll
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Numerics.Vectors.dll
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Text.Encodings.Web.dll
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Text.Json.dll
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Threading.Tasks.Extensions.dll
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.ValueTuple.dll
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\Npgsql.pdb
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\Npgsql.xml
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Buffers.xml
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Memory.xml
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Numerics.Vectors.xml
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Text.Encodings.Web.xml
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Text.Json.xml
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.Threading.Tasks.Extensions.xml
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\bin\Debug\System.ValueTuple.xml
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.csprojAssemblyReference.cache
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.Form1.resources
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.Form2.resources
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.Form3.resources
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.Properties.Resources.resources
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.csproj.GenerateResource.cache
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.csproj.CoreCompileInputs.cache
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.csproj.CopyComplete
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.exe
+A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.pdb

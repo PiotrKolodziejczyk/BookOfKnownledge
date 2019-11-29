@@ -1,0 +1,20 @@
+﻿WebClient jest przeznaczona do przeprowadzania prostych operacji pobierania lub przekazywania danych HTTP lub FTP
+WebRequest i WebResponse są przeznaczone do niskiego poziomu kontroli operacji HTPP i FTP po stronie klienta
+HttpClient jest przeznaczona do użycia APi HTTP oraz RESTful
+HttpListener jest przeznaczony do utworzenia serwera HTTP
+SmtpClient pozwala na wysyłanie wiadomości email
+Dns jest przenzaczona do konwersji między nazwami domen i adresami
+TCPClient UdpClient TcpListener i Socket są używane w celu zapewnienia bezpośredniego dostępu do warstw transportowej i sieciowej
+Uruchamia plik w domyslnej przegladarce System.Diagnostics.Process.Start (code.htm); 
+Pobiera strone ,wyswietla info o postepie i przerywa operacje jezeli trwa powyzej 5 sekund var wc = new WebClient(); wc.DownloadProgressChanged += (sender,args) => Console.Writeline("Ukonczono" + args.ProgressPercentage +"%"); Task.Delay(5000).ContinueWith(wc.CancelAsync()); await wc.DownloadFileTaskAsync("url","nazwaPliku"); 
+Procedura uzycia WebRequest i WebResponse ; 1. Wywolanie WebRequest.Create() wraz z URI; 2.Przypisanie Proxy ;3. Przypisanie Credentials ; 4. Wywolanie GetRequestStream() i zapis do strumienia ; 5. Wywolanie GetResponse() ;6 Wywolanie GetResponseStream() tutaj moze pomoc StreamReader;
+Powoduje pobranie i wyswietlenie strony (inna wersja poprzedniego przykladu) WebRequest req = WebRequest.Create(URI);req.Proxy=null; using(WebResponse res = req.GetResponse())using(Stream rs = GetResponseStream())using(FileStream fs = File.Create("nazwa")rs.CopyTo(fs); 
+To samo co wyzej tylko asynchronicznie WebRequest req = WebRequest.Create(URI);req.Porxy=null; using(WebResponse res = await req.GetResponseAsync())using(Stream rs = res.GetResponseStream())using(FileStream fs = File.Create("nazwapliku))await rs.CopyToAsync(fs); 
+Pobiera 2 strony jednoczesnie var client = new HttpClient(); var task1 = client.GetStringAsync(Adres1); var task2 =client.GetStringAsync(adres2); Console.Writeline(await task1); to samo tylko (await task2); 
+Aby ustawic rzeczyw HttpClient trzeba stworzyc HttpClientHandler i przekazac w konstruktorze HttpClient
+Pobiera strone z zapytaniem WebClient w google WebClient wc = new WebClient{Proxy=null}; wc.QueryString.Add("q", "WebClient")-wyszukiwanie slowa WebClient;wc.QueryString.Add("h1", "pl");-wyswietlenie w jezyku polskim wc.DownloadFile("http://www.google.pl/search","results.htm"); System.Diagnostics.Process.Start("results.html"); 
+Pokazuje jakie cookies zostaly otrzymane var cc = new CookieContainer(); var request = (HttpWebRequest) WebRequest.Create("www.google.pl");request.Proxy=null;request.CookieContainer =cc;using(var response = (HttpWebResponse) request.GetResponse()){foreach(Cookie c in response.Cookies){Console.Writeline(c.Name,c.Value,c.Path,c.Domain); 
+Zalogowywuje do strony internetowej ,bede zalogowany dopoki bede przypisywal cookieContainer kolejnym zadaniom string loginUri ="nazwa witryny/login"; string username ="Nazwa uzytkownika";string password="haslo";string reqString = "username="+username+"&password="+password;byte[] requestData = Encoding.UTF8.GetBytes(reqString);CookieContainer cc = new CookieContainer(); var request = (HttpWebRequest)WebRequest.Create(loginUri);request.Proxy =null;request.COokieCOntainer= cc; request.Method ="POST";request.ContentType="application/x-www-form-urlencoded";request.ContentLength=requestData.Lenght;using(var response = (HttpWebResponse)request.GetResponse())foreach(Cookie c in response.Cookies)Console.Writeline(c.Name + "=" + c.Value);
+
+
+

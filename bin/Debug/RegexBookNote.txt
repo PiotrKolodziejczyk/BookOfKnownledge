@@ -1,0 +1,18 @@
+﻿Kwantyfikator zachłanny zjada cały tekst np <p>.*</p> na końcu spróbuje dopasować '>' jeżeli się nie uda dokonuje nawrotu,ma zapisaną pozycje dla każdego powtórzenia kwantyfikatora wykraczającego poza jego minimum. Jeżeli nie uda się dopasować '>' do ostatniego znaku podejmie próbe dopasowania do przed ostatniego jeżeli też nie dopasuje to bedzie próbować dopóki coś znajdzie albo nie ,jeżeli nic nie znajdzie wyrażenie zakończy sie porażką a jeżeli uda sie dopasować gdzieś '>' spóbuje dopasować '/' jeżeli się nie uda ponownie zainicjuje nawrót i dopasowanie '</p>' jeżeli nie to ostateczna porażka.
+Wyrażenie \b\d+?\b i wyrazenie \b\d+\b dopasowują w ten sam sposób więc nie potrzebne są nawroty.Rozwiązanie to użycie kwantyfikatora własnościowego czyli \b\d++\blub grupy atomowej \b(?>\d+)\b które nie wykonują nawrotów i zwiekszają wydajność.
+Kwantyfikator własnościowy wykonuje próbe dopasowania możliwie wiele razy ale nie zapisują pozycji nawrotów.
+Pozytywne Wyszukiwanie wstecz przeszukuje tekst od prawej do lewej ,pozytywne wyszukiwanie wstecz (?<=tekst) sprawdza czy znajduje sie tekst na lewo od bieżącej pozycji i eliminuje tekst z wyrazenia
+Pozytywne wyszukiwanie w przód (?=wyrazenie) sprawdza czy znajduje sie teskt na prawo od biezacej pozycji i nie umieszcza w wyrazeniu
+Negatywne wyszukiwanie w przód (?!wyrazenie) jest pozytywne jeżeli na prawo od tekstu nie ma dopasowania
+Negatywne wyszukiwanie wstecz (?<!tekst) jest pozytywne jezeli na lewo od tekstu nie ma dopasowania 
+Konstrukcja warunkowa (?(1)then|else) jeżeli pierwsza grupa została gdzieś dopasowana to then jezeli nie to else
+Konstrukcja $& zastępuje pattern
+Bez Regex.Compiled kompilacja ma miejsce dopiero w czasie działania programu , jeśli użjemy opcji Regex.Compiled wyrażenie zostanie skompilowane do CIL jest 10 razy szybszy przy przetwarzaniu tekstu ale 2 razy dłużej się kompiluje ,używać przy dużych wyrażeniach
+IgnorePatternWhitespace - swobodne stosowanie znaków białych
+IgnoreCase - Ignorowanie wielkości liter
+Singleline - Dopasowywanie znaków podziału wiersza do kropek
+Multilie - Dopasowywanie znaków podziału wiersza do karet i znaków dolara
+ExplicitCapture - żadna grupa z wyjątkiem grup nazwanych nie ma charakteru grupy przechwytującej
+ECMAScript = działa tak samo w .NET i JavaScript
+IsMatch zwraca bool czy znalazło dopasowanie
+

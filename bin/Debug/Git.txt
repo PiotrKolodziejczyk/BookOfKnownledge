@@ -1,0 +1,37 @@
+﻿(Clear) czyści zawartość okna
+(Cd) przechodzi do danego folderu
+(Cd ..) wchodzi do folderu wyżej
+(pwd) ścieżka w której aktualnie jesteśmy
+(dir) pokazuje liste plików w folderze
+(mkdir nazwa) tworzy folder
+(touch nazwa albo >>) tworzy plik
+(rm) usuwa plik z * usuwa wszystkie z danym rozszerzeniem np *.html
+(git init) tworzy puste repozytorium
+(git status) Informuje co sie dzieje w gicie
+(git config --global user.name "Piotr Kołodziejczyk") ustawia globalnie imie
+(git config --global user.email "kolek2010@gmail.com" ustawia globalnie email
+(cat ~.gitconfig) pokazuje ustawienia
+(git config user.name albo user.email) ustawia lokalnie dla danego projektu
+(git config --global --unset user.email) usuwa maila globalnie
+(git config --global --list) lista ustawień globalnych
+(komenda --help) Przechodzimy do dokumentacji komendy
+(git add nazwa) dodaje plik do śledzenia
+(git config --global --unset-all core.editor) usuwa wszystkie edytory
+(git config --global core.editor code --wait) ustawia Visual Studio Code jako edytor
+(git log) informacje o commitach
+(git checkout --nazwaPliku) przywraca do poprzedniego stanu jesli zmodyfikujemy
+(git commit --amend) jesli chce zrobic zmiany w commicie
+(git show) pokazuje szczegółowo co się zmieniło w danym commicie
+(git diff) pokazuje różnice między plikami - wersją zmodyfikowaną w katalogu roboczym a wersją w indeksie
+(git rm --cashed nazwa) usuwa z indeksu
+(git reset) usuwa pliki ze staging area(pliki sa nadal śledzone i są w katalogu roboczym ,przywraca stan do ostatniego commita
+(git branch) tworzy nową gałąź
+(git checkout nazwa istniejącej gałęzi) przełącza pomiedzy gałęziami
+(git merge nazwa-brancha) łączy gałąź na której jesteśmy z gałęzią podaną
+(head) określa do której gałęzi sie odnosimy
+(git mv plik plik) zmienia nazwe pliku
+Jesli Visual Studio Code nie widzi gita to File -> Preferences -> Settings -> Open Settings JSON (ikonka w prawym górnym rogu). Jeśli masz takie właściwości i wartości, to je usuń lub zakomentuj."git.enabled": false, "git.autorefresh": false,
+(cat-file -t numer z metadanych) pokazuje co to jest 
+(cat-file -p numer z metadanych) pokazuje sciezki do drzewa rodzica autora
+(git remote add sciezka do repozytorium) Łączy lokalne repozytorium z tym na GitHubie
+(flaga -u) Tworzy stałe połączenie nie trzeba potem za kazdym razem wpisywac gdzie chcemy pushowac

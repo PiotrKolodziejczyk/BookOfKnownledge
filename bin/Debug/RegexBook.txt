@@ -1,0 +1,59 @@
+﻿Ponowne dopasowanie już dopasowanego tekstu (wyrażenie dopasowuje magiczne daty np 2008-08-08)<;\b\d\d(\d\d)-\1-\1\b;>Receptura 2.10. str 78
+Nazwane odwołanie wstecz (Też dopasowuje magiczne daty tyle że nazwane)<;\b\d\d(?<magic>\d\d)\k<magic>-\k<magic>\b;>Receptura 2.11. str 80
+Wybieranie minimalnego lub maksymalnego z powtórzeń (Dopasowuje np znaczniki html <p></p> wraz z tekstem pomiędzy nimi)<;<p>.*?</p>;>Receptura 2.13. str 86
+Eliminowanie nie potrzebnych nawrotów (wyrażenia \b\d+\b i \b\d+?\b dopasowują tak samo więc nie potrzebne są nawroty)<;\b\d++\b lub \b(?>\d+)\b;>Receptura 2.14. str 89
+Zapobieganie niekończącym się powtórzenią (Dopasowuje kompletny plik html sprawdzając poprawność html head title i body)<;<html>(?>.*?<head>)(?>.*?<title>)(?>.*?</title>)(?>.*?</head>)(?>.*?<body[^>]*>)(?>.*?</body>).*?</hmtl>;>Receptura 2.15. str 92
+Testowanie dopasowań bez ich dodawania do właściwego dopasowania (Dopasowuje tylko kot pomiędzy znacznikami <b>kot</b> nie włączając w wynik znaczników <b>)<;(?<=<b>)\w(?<=</b>);>Receptura 2.16. str 95
+Umieszczanie dopasowanie regularnego w tekście docelowym operacji wyszukiwania i zastępowania (Umieszcza przed i za wybrany tekst , pattern jest reprezentowany przez $&)<;pattern=http:\S dodany tekst <a href="$&">$&</a>;>Receptura 2.20. str 110
+Umieszczenie fragementu wyrażenia regularnego w tekście docelowym operacji wyszukiwania i zastępowania (Dopasowuje sekwencje 9 cyfr np 123456789 i konwertuje na(12) 3456-789)<;pattern=\b(\d{2})(\d{3})(\d{4})\b replace($1) $2-$3;>Receptura 2.21. str 111
+Filtrowanie dopasowań w kodzie (filtruje tylko liczby podzielne przez 13)<;StringCollection resultList = new StringCollection(); Regex regexObj = new Regex(@"\d+"); matchResult = regexObj.Match(subjectString); while(matchResult.Success){if(int.Parse(matchResult.Value) % 13 ==0){resultList.Add(matchResult.Value);}matchResult = matchResult.NextMatch()};>Receptura 3.12. str 185
+Odnajdywanie dopasowania w ramach innego dopasowania (Dopasowuje np wszystkie liczby które są pogrubione w html czyli pomiędzy znakami <b></b> i drugim wyrażeniem regularnym dopasowuje wszystkie liczby zamiennik dla kodu \d+(?=(?:(?!<b>).)*</b>))<;StringCollection resultList = new StringCollection();Regex outerRegex = new Regex(@"<b>(.*?)</b>",RegexOptions.Singleline);Regex regexObj = new Regex(@"\d+");var matchResult = outerRegex.Match(file);while(matchResult.Success){Match innerMatch = regexObj.Match(matchResult.Groups[1].Value);while(innerMatch.Success){resultList.Add(innerMatch.Value);innerMatch= innerMatch.NextMatch();}matchResult = matchResult.NextMatch();};>Receptura 3.13. str 188
+Zastępowanie dopasowań z wykorzystaniem ich fragmentów (Dopasowuje wyrażenie a potem zamienia kolejność czyli np 1 i 2 i zwraca 2 i 1 konstrukcja $2=$1 można też użyć nazwaynch przechwytów wtedy kontrukcja ${right}=${left}  )<;Regex regexObj = new Regex(@"(\d+)=(\d+)");var matchResult = regexObj.Replace(file, "$2=$1");>Receptura 3.15. str 199
+Zastępowanie dopasowań tekstem docelowym generowanym kodem proceduralnym (Zastępujemy dopasowania ich dwukrotnościami za pomocą metody pomocniczej MatchEvaluator)<;Regex regexObj = new Regex(@"/d+"); string resultString = regexObj.Replace(file, new MatchEvaluator(ComputeReplacment)); public string ComputeReplacment(Match matchResult){int twiceasmuch = int.Parse(matchResult.Value)*2; return twiceasmuch.toString();>Receptura 3.16. str 204
+Zastępowanie wszystkich dopasowań w ramach dopasowań do innego wyrażenia regularnego (Zastępujemy wszystkie dopasowania ale tylko w ramach innego tekstu np znaczników <b></b>)<;Regex outerRegex = new Regex(@"<b>(.*?)</b>"); Regex innerRegex = new Regex(@"befor"); string resultString = outerRegex.Replace(file,new MatchEvaluator(ComputeReplacment)); pubilic string ComputeReplacment(Match matchResult){return innerRegex.Replace(matchResult.Value,"after");};>Receptura 3.17. str 211
+Zastępowanie wszystkich dopasowań pomiędzy dopasowaniami do innego wyrażenia regularnego (Zastępujemy wszystko oprócz rzeczy które znajdują się w innym dopasowaniu)<; string resultString = null;Regex outerRegex = new Regex("<[^<>]*>");Regex innerRegex = new Regex("\"");int lastIndex = 0;Match outerMatch = outerRegex.Match(file);while(outerMatch.Success){string textBetween = file.Substring(lastIndex, outerMatch.Index - lastIndex);Console.WriteLine(textBetween);resultString = resultString + innerRegex.Replace(textBetween, "&");lastIndex = outerMatch.Index + outerMatch.Length;resultString = resultString + outerMatch.Value;Console.WriteLine(outerMatch = outerMatch.NextMatch());}string textAfter = file.Substring(lastIndex, file.Length - lastIndex);resultString = resultString + innerRegex.Replace(textAfter, "!!");;>Receptura 3.18. str 213
+Dzielenie łańcucha za pomocą wyrażenia regularnego (Dzieli łańcuch np html nie uwzgledniając znaczników html)<;Regex regex = new Regex("<[^<>]*>"); string[] splitArray = regex.Split(file);>Receptura 3.19. str 218
+Dzielenie łańcucha z zachowaniem dopasowań (Dzieli łańcuch np html z uwzglednieniem dopasowań czyli np znaczników html)<;Regex regex = new Regex("(<[^<>]*>)"); string[] splitArray = regex.Split(file);>Receptura 3.20. str 227
+Dzielenie na wiersze (Dzieli nasz łańcuch na tablice wierszy ,Do metody Split wpisujemy )<;\r?\n;>Receptura 3.21. str 231
+Email (Weryfikuje poprawność email ,Najprostsze sprawdzające tylko zawartość @ i bez znaków białych )<;^S+@\S+$;>Receptura 4.1. str 235
+Email (Weryfikuje poprawność email ,nazwa domeny nie moze zawierać dowolnych znaków czyli za znakiem @ a nazwa uzytkownika zawiera znaki z jeszcze bardziej ograniczonego zbioru )<;^[A-Z0-9+_.-]+@[A-Z0-9.-]+$;>Receptura 4.1. str 235
+Email (Weryfikuje poprawność email ,Bez początkowych,końcowych i następujących po sobie kropek )<;^[w!#$%&'*+/=?`{|}~^-]+(?:\.[w!#$%&'*+/=?`{|}~^-]+)*@[A-Z0-9]+(?:\.[A-Z0-9]+)*$;>Receptura 4.1. str 235
+Numery w Ameryce północnej ()<;;>Receptura 4.2. str 241
+Międzynarodowe numery telefonów (Z plusem na początku)<;^\+(?:[0-9] ?){6,14}[0-9]$;>Receptura 4.3. str 246
+Weryfikacja tradycyjnych formatów zapisu daty (daty mm/dd/yy,mm/dd/yyyy,dd/mm/yy,dd/mm/yyyy. nie wyklucza np 31 lutego)<;^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$;>Receptura 4.4. str 248
+Weryfikacja zapisu daty z odrzuceniem np 31 Luty (odrzuca nie prawidłowe daty np 31 lut dd/mm/yyy)<;^(?:(?<day>[12][0-9]|0?[1-9])/(?<month>0?2)|(?<day>30[12][0-9]|0?[1-9])/(?<month>0?[469]|11)|(?<day>3[01]|[12][0-9]|0?[1-9])/(?<month>0?[13578]|1[02])/(?<year>(?:[0-9]{2})?[0-9]{2})$;>Receptura 4.5. str 254
+Weryfikacja tradycyjnych formatów godziny (Weryfikacja tradycyjne formaty takie jak hh:mm,hh:mm:ss, 12 godzinnego)<;^1[0-2]|0?[1-9]:([0-5]?[0-9]):([0-5]?[0-9])$;>Receptura 4.6. str 256
+Weryfikacja tradycyjnych formatów godziny (Weryfikacja tradycyjne formaty takie jak hh:mm,hh:mm:ss, 24 godzinnego)<;^(2[0-3]|[01]?[0-9]):([0-5]?[0-9]):([0-5]?[0-9])$;>Receptura 4.6. str 256
+Data i godzina zgodna z ISO 8601 (Zgodna z schematem XML Schema)<;;>Receptura 4.7. str 259
+Ograniczenie liczby wierszy w przetwarzanym tekście (Sprawdzamy czy dany łańcuch składa się z co najwyżej 5 wierszy)<;\A(?>(?>\r\n?|\n)?[^\r\n]*){0,5}\Z;>Receptura 4.10. str 271
+Weryfikacja numerów kart kredytowych (Weryfikuje karty kredytowe)<;;>Receptura 4.19. str 293
+Odnajdywanie wyrazów znajdujących się w pobliżu (znajduje wyrazy które są obok siebie przedzielone nie więcej niż 5 wyrazami)<;\b(?:word1\W+(?:/w+/W+){0,5}?word2|word2\W+(?:\w+\W+){0,5}?word1)\b;>Receptura 5.7 str 323
+Odnajdywanie powtarzających się wyrazów (Odnajdujemy wyrazy powtórzone)<;\b([A-Z]+)\s+\1\b;>Receptura 5.8. str 329
+Usuwanie powtarzających się wierszy (Usuwa powtarzająće się wiersze poza jednym)<;;>Receptura 5.9. str 330
+Dopasowywanie kompletnych wierszy zawierających określony wyraz (Chcemy dopasować wszystkie wiersze które zawierają wytaz ninja)<;^.*\bninja\b.*$;>Receptura 5.10. str 335
+Dopaswowanie kompletynych wierszy nie zawierających określonego wyrazu (Dopasowuje wiersze gdzie nie występuje wyraz ninja)<;^(?:(?!\bninja\b).)*$;>Receptura 5.11. str 337
+Zastępowanie powtarzających się znaków białych pojedyńczą spacją (Zastępuje znaki białe pojedyńczymi spacjami)<;;>Receptura 5.13. str 341
+Liczby szesnastkowe (znajduje liczby szesnastkowe)<;;>Receptura 6.2. str 350
+Liczby należące do określonych przedziałów (Np z przedziału 1 do 24)<;^2[0-4]|1[0-9]|[1-9])$;>Receptura 6.5. str 355
+Liczby szesnastkowe należące do określonego przedziału (Np z przedziału 1 do 12)<;^[1-9a-c]$;>Receptura 6.6. str 361
+Weryfikacja adresów URL (Chcemy sprawdzić,czy dany fragment tekstu zawiera prawidłowy adres URL)<;^(https?|ftp|file)://.+$;>Receptura 7.1. str 371
+Odnajdywanie adresów URL w dłuższym tekście (Odnajdujemy adresy URL w dłuższym tekście bez spacji i końcowych znaków interpunkcyjnych adresy z identyfikatorami ftp i www nie muszą być poprzedzane identyfikatorami schamatu)<;\b((https?|ftp|file)://|www|ftp)\.[-A-Z0-9+&@#/%?=~_|$!:,.;]*[A-Z0-9+&@#/%=~_|$];>Receptura 7.2. str 375
+Odnajdywanie w tekście adresów URL otoczonych cudzysłowiami (Odnajduje adresy URL adresy mogą być ale nie muszą otoczone znakami interpunkcyjnymi)<;\b(?:(?:https?|ftp|file)://|(www|ftp)\.)[-A-Z0-9+&@#/%?=~_|$!:,.;]*[-A-Z0-9+&@#/%=~_|$]|"(?:(?:https?|ftp|file)://|(www|ftp)\.)[^"\r\n]+"|'(?:(?:https?|ftp|file)://|(www|ftp)\.)[^'\r\n]+';>Receptura 7.3. str 376
+Odnajdywanie w tekście adresów URL z nawiasami okrągłymi (Zawierające pary nawiasów w ramach tych adresów ale nawiasy otaczające całe adresy URL mają wchodzić w skład dopasowań)<;;>Receptura 7.4. str 378
+Weryfikacja poprawnośći adresów URL według ogólnych reguł (Zgodne ze standardem RFC 3986)<;;>Receptura 7.7. str 383
+Wyodrębnianie schematu z adresu URL (Czyli np wyodrebniamy http albo www)<;;>Receptura 7.8. str 388
+Dopasowanie adresu IPv4 (prawidłowe adresy IPv4 255.255.255.255)<;^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[04][0-9]|[01]?[0-9][0-9]?)$;>Receptura 7.16. str 403
+Dopasowanie adresu IPv6 (prawidłowe adresy IPv6)<;;>Receptura 7.17. str 406
+Weryfikacja ścieżek systemu Windows (Chcemy sprawdzić czy dany łańcuch zawiera prawidłową ścieżkę do folderu lub pliku systemu Windows)<;^[a-z]:\\(?:[^\\/:*?"<>|\r\n]+\\)*[^\\/:*?"<>|\r\n]*$;>Receptura 7.18. str 418
+Odnajdywanie znaczników HTML,XHTML (Chcemy odnajdywać dowolne znaczniki HTMLa ,XHTML)<;/?([A-Za-z][^\s>/]*)(?:[^>"']|"[^"]*"|'[^']*')*;>Receptura 8.1. str 443
+Odnajdywanie znaczników XML (Chcemy odnajdywać dowolne znaczniki XML)<;(?:([_:A-Z][-.:\w]*)(?:\s+[_:A-Z][-.:\w]*\s*=\s*(?:"[^"]*"|'[^']*'))*\s*/?|/([_:A-Z][-/:\w]*)\s*);>Receptura 8.1. str 444
+Zastępowanie znaczników <b> znacznikami <strong> z zachowaniem atrybutami (Zastępuje znaczniki <b> znacznikami <strong> i atrybuty zostają)<;;>Receptura 8.2. str 459
+Usuwanie znaczników Xmla z wyjątkiem <em> i <strong> (usuwanie)<;;>Receptura 8.3. str 462
+Dopasowanie nazw XML-a (dopasowuje prawidłowe znaczniki XML)<;;>Receptura 8.4. str 465
+Konwersja zwykłego tekstu na kod HTMLa poprzez dodanie znaczników <p> i <br> (Przekształca zwykły tekst na html)<;;>Receptura 8.5. str 471
+Odnajdywanie konkretnych atrybutów w znacznikach XMLa i HTML (Chcemy znaleźć w pliku w formacie HTML i XML znaczniki zawierające konkretny atrybut)<;;>Receptura 8.6. str 475
+Dodawanie atrybutu tam gdzie go jeszcze nie ma ( np cellspacing do znaczników <table> tam gdzie jeszcze nie ma)<;;>Receptura 8.7. str 479
+Usuwanie komentarzy XML (usuwa komentarze Xml)<;;>Receptura 8.8. str 482
+Odnajdywanie słów w ramach komentarzy XML i HTML (Chcemy odnaleźć wszytkie słowa TODO w ramach komentarzy)<;;>Receptura 8.9. str 486
+Zamiana separatora stosowanego w plikach CSV (Chcemy zastąpić tabulacjami wszystkie przecinki oddzielające pola w pliku CSV w cudzysłowiach są nie zmienione)<;;>Receptura 8.10. str 491
+Wyodrębnianie pól CSV z określonej kolumny (Chcemy wyodrębnić wszystkie pola z trzeciej kolumny pliku CSV)<;;>Receptura 8.11. str 494

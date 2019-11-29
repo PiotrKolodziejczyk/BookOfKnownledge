@@ -1,0 +1,29 @@
+﻿Podstawowy async (Wstrzymanie na określony czas )<;;>Receptura 2.1. str 38
+Podstawowy async (Zwracanie wykonanych zadań )<;;>Receptura 2.2. str 40
+Podstawowy async (Raportowanie postępu )<;;>Receptura 2.3. str 42
+Podstawowy async (Oczekiwanie na wykonanie zestawu zadań )<;;>Receptura 2.4. str 43
+Podstawowy async (Oczekiwanie na wykonanie jakiegokolwiek zadania  )<;;>Receptura 2.5. str 46
+Podstawowy async (Przetwarzanie wykonanych zadań )<;;>Receptura 2.6. str 48
+Podstawowy async (Unikanie kontekstu dla kontynuacji )<;;>Receptura 2.7. str 51
+Podstawowy async (Obsługa wyjątków z metod async typu Task )<;;>Receptura 2.8. str 53
+Podstawowy async (Obsługa wyjątków z metod async typu void)<;;>Receptura 2.9. str 55
+Podstawy przetwarzania równoległego (Równoległe przetwarzanie danych)<;;>Receptura 3.1. str 60
+Podstawy przetwarzania równoległego (Równoległa agregacja)<;;>Receptura 3.2. str 62
+Podstawy przetwarzania równoległego (Równoległe wywołanie)<;;>Receptura 3.3. str 63
+Podstawy przetwarzania równoległego (Równoległość dynamiczna)<;;>Receptura 3.4. str 65
+Podstawy przetwarzania równoległego (Parallel LINQ)<;;>Receptura 3.5. str 67
+Kolekcje (Niemutowalne stosy i kolejki)<;;>Receptura 8.1. str 130
+Kolekcje (Listy niemutowalne)<;;>Receptura 8.2. str 133
+Kolekcje (Zbiory niemutowalne)<;;>Receptura 8.3. str 135
+Kolekcje (Słowniki niemutowalne)<;;>Receptura 8.4. str 137
+Kolekcje (Słowniki bezpieczne wątkowo)<;;>Receptura 8.5. str 140
+Kolekcje (Kolejki blokujące)<;;>Receptura 8.6. str 142
+Kolekcje (Stosy i multizbiory blokujące)<;;>Receptura 8.7. str 145
+Kolekcje (Kolejki asynchroniczne)<;;>Receptura 8.8. str 147
+Kolekcje (Stosy i multizbiory asynchroniczne)<;;>Receptura 8.9. str 150
+Kolekcje (Kolejki blokujące/asynchroniczne)<;;>Receptura 8.10. str 153
+Synchronizacja (Blokady)<;;>Receptura 11.1. str 207
+Synchronizacja (Blokady async)<;;>Receptura 11.2. str 209
+Synchronizacja (Sygnały blokujące)<;;>Receptura 11.3. str 212
+Synchronizacja (Sygnały async)<;;>Receptura 11.4. str 213
+Synchronizacja (Ograniczanie współbieżności)<;;>Receptura 11.5. str 215
