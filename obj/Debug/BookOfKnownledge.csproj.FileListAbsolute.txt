@@ -65,3 +65,36 @@ A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.csproj.
 A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.csproj.CopyComplete
 A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.exe
 A:\NAPRAWDE POTRZEBNE!!!!!!!\BookOfKnownledge\obj\Debug\BookOfKnownledge.pdb
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\BookOfKnownledge.exe.config
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\BookOfKnownledge.exe
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\BookOfKnownledge.pdb
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\Npgsql.dll
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Buffers.dll
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Memory.dll
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Numerics.Vectors.dll
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Text.Encodings.Web.dll
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Text.Json.dll
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.ValueTuple.dll
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\Npgsql.pdb
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\Npgsql.xml
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Buffers.xml
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Memory.xml
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Numerics.Vectors.xml
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Text.Encodings.Web.xml
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Text.Json.xml
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Book of Knownledge\BookOfKnownledge\bin\Debug\System.ValueTuple.xml
+D:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.csprojAssemblyReference.cache
+D:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.Form1.resources
+D:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.Form2.resources
+D:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.Form3.resources
+D:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.Properties.Resources.resources
+D:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.csproj.GenerateResource.cache
+D:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.csproj.CopyComplete
+D:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.exe
+D:\Book of Knownledge\BookOfKnownledge\obj\Debug\BookOfKnownledge.pdb
